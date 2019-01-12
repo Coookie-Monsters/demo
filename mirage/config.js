@@ -15,7 +15,7 @@ export default function() {
       id: 'tools',
       attributes: {
         title: "Tools",
-        image: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg"
+        image: "/assets/images/tools.png"
       }
     },
     {
@@ -23,7 +23,7 @@ export default function() {
       id: 'seeds',
       attributes: {
         title: "Seeds",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg"
+        image: "/assets/images/seeds.jpg"
       }
     },
     {
@@ -31,7 +31,7 @@ export default function() {
       id: 'plants',
       attributes: {
         title: "Plants",
-        image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg"
+        image: "/assets/images/plants.png"
       }
     }
   ];
