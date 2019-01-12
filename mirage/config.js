@@ -1,4 +1,4 @@
-export default function() {
+export default function () {
 
   // These comments are here to help you get started. Feel free to delete them.
 
@@ -33,22 +33,30 @@ export default function() {
         title: "Plants",
         image: "/assets/images/plants.png"
       }
+    },
+    {
+      type: 'category',
+      id: 'plant-starts',
+      attributes: {
+        title: "Plant Starts",
+        image: "/assets/images/fertilizer.png"
+      }
     }
   ];
 
-  this.get('/categories', function(db, request) {
+  this.get('/categories', function (db, request) {
     if (request.queryParams.title !== undefined) {
       let filteredRentals = categories.filter(function (i) {
         return i.attributes.title.toLowerCase().indexOf(request.queryParams.title.toLowerCase()) !== -1;
       });
-      return { data: filteredRentals };
+      return {data: filteredRentals};
     } else {
-      return { data: categories };
+      return {data: categories};
     }
   });
 
   this.get('/categories/:id', function (db, request) {
-    return { data: categories.find((category) => request.params.id === category.id) };
+    return {data: categories.find((category) => request.params.id === category.id)};
   });
 
   // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
