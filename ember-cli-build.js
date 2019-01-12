@@ -7,8 +7,8 @@ module.exports = function(defaults) {
     'ember-bootstrap': {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
-      'importBootstrapCSS': true,
-      whitelist: ['bs-button']
+      'importBootstrapCSS': true
+      // whitelist: ['bs-button']
     }
   });
 

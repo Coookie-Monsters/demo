@@ -1,12 +1,49 @@
 <div class="jumbo show-listing">
-  <h2 class="title">{{this.model.title}}</h2>
+  <h2 class="title">Donate {{this.model.title}}</h2>
   <div class="content">
     <div>
-      <img
-        src={{this.model.image}}
-        class="rental-pic"
-        alt="Picture of {{this.model.title}}"
-      >
+      <form>
+        <div class="form-group">
+          <label for="name">Name: </label>
+          <input type="text" class="form-control" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@email.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone: </label>
+          <input type="text" class="form-control" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="phone">How are you giving: </label>
+          <input type="tel" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="dropdown">
+          <label for="item">What: </label>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+        <div>
+          <img
+            src={{this.model.image}}
+            class="rental-pic"
+            alt="Picture of {{this.model.title}}"
+          >
+        </div>
+        <div class="row">
+          <button type="submit" class="button btn btn-primary">Upload an image</button>
+        </div>
+        <div>
+          <button type="submit" class="button btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

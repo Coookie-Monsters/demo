@@ -310,9 +310,9 @@ p {
   flex-direction: row;
 }
 
-.show-listing .content > * {
+/* .show-listing .content > * {
   flex-basis: 50%;
-}
+} */
 
 .show-listing .title {
   margin-bottom: 15px;
