@@ -7,6 +7,13 @@
     <img src={{this.category.image}} alt="">
   </a>
   <div class="details">
-    <h3>{{link-to this.category.title "categories.show" this.category class=this.category.id}}</h3>
+    <h3>
+      {{link-to
+        this.category.title
+        "categories.show"
+        this.category
+        class=this.category.id
+      }}
+    </h3>
   </div>
 </article>

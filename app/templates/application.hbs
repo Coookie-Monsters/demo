@@ -21,13 +21,9 @@
         {{/if}}
       {{/link-to}}
       {{#if this.isSpanish}}
-          {{#bs-button onClick=(action "translate")}}
-              English
-          {{/bs-button}}
+        {{#bs-button onClick=(action "translate")}}English{{/bs-button}}
       {{else}}
-        {{#bs-button onClick=(action "translate")}}
-          Español
-        {{/bs-button}}
+        {{#bs-button onClick=(action "translate")}}Español{{/bs-button}}
       {{/if}}
     </div>
   </div>
