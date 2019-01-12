@@ -13,11 +13,11 @@
         </div>
         <div class="form-group">
           <label for="phone">Phone: </label>
-          <input type="text" class="form-control" id="phone">
+          <input type="tel" class="form-control" id="phone">
         </div>
         <div class="form-group">
-          <label for="phone">How are you giving: </label>
-          <input type="tel" class="form-control" id="exampleInputPassword1">
+          <label for="how">How are you giving: </label>
+          <input type="text" class="form-control" id="exampleInputPassword1">
         </div>
         <div class="dropdown">
           <label for="item">What: </label>
@@ -40,9 +40,9 @@
         <div class="row">
           <button type="submit" class="button btn btn-primary">Upload an image</button>
         </div>
-        <div>
-          <button type="submit" class="button btn btn-primary">Submit</button>
-        </div>
+        {{#link-to "success" class="button btn btn-primary"}}
+          Submit
+        {{/link-to}}
       </form>
     </div>
   </div>

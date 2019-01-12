@@ -309,6 +309,10 @@ p {
   display: flex;
   flex-direction: row;
 }
+.show-listing .content .btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .show-listing .content > * {
   flex-basis: 100%;
