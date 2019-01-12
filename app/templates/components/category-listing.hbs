@@ -4,11 +4,10 @@
     class="image {{if this.isWide "wide"}}"
     role="button"
   >
-    <img src={{this.rental.image}} alt="">
+    <img src={{this.category.image}} alt="">
     <small>View Larger</small>
   </a>
   <div class="details">
-    <h3>{{link-to this.rental.title "rentals.show" this.rental class=this.rental.id}}</h3>
+    <h3>{{link-to this.category.title "categories.show" this.category class=this.category.id}}</h3>
   </div>
-  {{location-map location=this.rental.city}}
 </article>

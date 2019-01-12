@@ -3,8 +3,8 @@
 as |filteredResults|
 }}
   <ul class="results">
-    {{#each filteredResults as |rentalUnit|}}
-      <li>{{rental-listing rental=rentalUnit}}</li>
+    {{#each filteredResults as |item|}}
+      <li>{{category-listing category=item}}</li>
     {{/each}}
   </ul>
 {{/list-filter}}

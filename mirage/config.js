@@ -9,9 +9,9 @@ export default function() {
    */
   this.passthrough('https://api.mapbox.com/**');
   this.namespace = '/api';
-  let rentals = [
+  let categories = [
     {
-      type: 'rentals',
+      type: 'category',
       id: 'tools',
       attributes: {
         title: "Tools",
@@ -19,7 +19,7 @@ export default function() {
       }
     },
     {
-      type: 'rentals',
+      type: 'category',
       id: 'seeds',
       attributes: {
         title: "Seeds",
@@ -27,7 +27,7 @@ export default function() {
       }
     },
     {
-      type: 'rentals',
+      type: 'category',
       id: 'plants',
       attributes: {
         title: "Plants",
@@ -36,19 +36,19 @@ export default function() {
     }
   ];
 
-  this.get('/rentals', function(db, request) {
+  this.get('/categories', function(db, request) {
     if (request.queryParams.title !== undefined) {
-      let filteredRentals = rentals.filter(function (i) {
+      let filteredRentals = categories.filter(function (i) {
         return i.attributes.title.toLowerCase().indexOf(request.queryParams.title.toLowerCase()) !== -1;
       });
       return { data: filteredRentals };
     } else {
-      return { data: rentals };
+      return { data: categories };
     }
   });
 
-  this.get('/rentals/:id', function (db, request) {
-    return { data: rentals.find((rental) => request.params.id === rental.id) };
+  this.get('/categories/:id', function (db, request) {
+    return { data: categories.find((category) => request.params.id === category.id) };
   });
 
   // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
