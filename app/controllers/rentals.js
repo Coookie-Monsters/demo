@@ -4,7 +4,7 @@ export default Controller.extend({
   actions: {
     filterByCity(param) {
       if (param !== '') {
-        return this.store.query('rental', { city: param }).then((filteredResults) => {
+        return this.store.query('rental', { title: param }).then((filteredResults) => {
           return { query: param, results: filteredResults };
         });
       } else {
