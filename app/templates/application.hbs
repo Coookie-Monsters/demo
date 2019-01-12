@@ -7,11 +7,28 @@
     {{/link-to}}
     <div class="links">
       {{#link-to "about" class="menu-about"}}
-        About
+        {{#if this.isSpanish}}
+          Acerca de
+        {{else}}
+          About
+        {{/if}}
       {{/link-to}}
       {{#link-to "contact" class="menu-contact"}}
-        Contact
+        {{#if this.isSpanish}}
+          Contactar
+        {{else}}
+          Contact
+        {{/if}}
       {{/link-to}}
+      {{#if this.isSpanish}}
+          {{#bs-button onClick=(action "translate")}}
+              English
+          {{/bs-button}}
+      {{else}}
+        {{#bs-button onClick=(action "translate")}}
+          Español
+        {{/bs-button}}
+      {{/if}}
     </div>
   </div>
   <div class="body">
