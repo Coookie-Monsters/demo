@@ -16,20 +16,18 @@
           <input type="tel" class="form-control" id="phone">
         </div>
         <div class="form-group">
-          <label for="how">How are you giving: </label>
+          <label for="how">What are you giving: </label>
           <input type="text" class="form-control" id="exampleInputPassword1">
         </div>
-        <div class="dropdown">
-          <label for="item">What: </label>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown button
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
+        <!-- Example single danger button -->
+        {{#bs-dropdown as |dd|}}
+                      {{#dd.button}}Delivery: <span class="caret"></span>{{/dd.button}}
+                      {{#dd.menu as |ddm|}}
+                          {{#ddm.item}}{{#ddm.link-to "index"}}Pick-up only{{/ddm.link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#ddm.link-to "index"}}I can deliver to recipient{{/ddm.link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#ddm.link-to "index"}}I can deliver to a dropoff site{{/ddm.link-to}}{{/ddm.item}}
+                        {{/dd.menu}}
+                    {{/bs-dropdown}}
         <div>
           <img
             src={{this.model.image}}
