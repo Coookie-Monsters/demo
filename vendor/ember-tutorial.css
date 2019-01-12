@@ -328,7 +328,7 @@ p {
 }
 
 .show-listing .content > * {
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 
 .show-listing .title {
