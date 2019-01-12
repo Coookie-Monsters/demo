@@ -14,7 +14,7 @@ export default function () {
       type: 'category',
       id: 'tools',
       attributes: {
-        title: "Tools",
+        title: "Tools / Herramientas",
         image: "/assets/images/tools.png"
       }
     },
@@ -22,7 +22,7 @@ export default function () {
       type: 'category',
       id: 'seeds',
       attributes: {
-        title: "Seeds",
+        title: "Seeds / Semillas",
         image: "/assets/images/seeds.jpg"
       }
     },
@@ -30,7 +30,7 @@ export default function () {
       type: 'category',
       id: 'plants',
       attributes: {
-        title: "Plants",
+        title: "Plants / Plantas",
         image: "/assets/images/plants.png"
       }
     },
@@ -38,7 +38,7 @@ export default function () {
       type: 'category',
       id: 'plant-starts',
       attributes: {
-        title: "Plant Starts",
+        title: "Plant Starts / Empizo Plantas",
         image: "/assets/images/fertilizer.png"
       }
     }
