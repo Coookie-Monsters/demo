@@ -23,6 +23,23 @@ a {
   line-height: 1.5;
 }
 
+.container {
+  background-image: url('/assets/images/landingpage.jpg') !important;
+  /*height: 1000px;  You must set a specified height */
+  background-position: center !important; /* Center the image */
+  background-repeat: no-repeat !important; /* Do not repeat the image */
+  background-size: cover !important;
+}
+
+.lp-button {
+
+}
+
+#landing-page {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
 body {
   background: #f3f3f3;
 }
