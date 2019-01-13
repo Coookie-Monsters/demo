@@ -21,7 +21,7 @@
         </div>
         <!-- Example single danger button -->
         {{#bs-dropdown as |dd|}}
-                      {{#dd.button}}Delivery: <span class="caret"></span>{{/dd.button}}
+                      {{#dd.button}}Delivery: Pick-up only<span class="caret"></span>{{/dd.button}}
                       {{#dd.menu as |ddm|}}
                           {{#ddm.item}}{{#ddm.link-to "index"}}Pick-up only{{/ddm.link-to}}{{/ddm.item}}
                           {{#ddm.item}}{{#ddm.link-to "index"}}I can deliver to recipient{{/ddm.link-to}}{{/ddm.item}}
