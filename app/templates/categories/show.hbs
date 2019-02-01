@@ -1,47 +1,58 @@
 <div class="jumbo show-listing">
-  <h2 class="title">Donate {{this.model.title}}</h2>
+  <h2 class="title">Donate {{this.model.category.title}}</h2>
   <div class="content">
-    <div>
-      <form>
-        <div class="form-group">
-          <label for="name">Name: </label>
-          <input type="text" class="form-control" placeholder="Your Name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email: </label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@email.com">
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone: </label>
-          <input type="tel" class="form-control" id="phone">
-        </div>
-        <div class="form-group">
-          <label for="how">What are you giving: </label>
-          <input type="text" class="form-control" id="exampleInputPassword1">
-        </div>
-        <!-- Example single danger button -->
-        {{#bs-dropdown as |dd|}}
-                      {{#dd.button}}Delivery: Pick-up only<span class="caret"></span>{{/dd.button}}
-                      {{#dd.menu as |ddm|}}
-                          {{#ddm.item}}{{#ddm.link-to "index"}}Pick-up only{{/ddm.link-to}}{{/ddm.item}}
-                          {{#ddm.item}}{{#ddm.link-to "index"}}I can deliver to recipient{{/ddm.link-to}}{{/ddm.item}}
-                          {{#ddm.item}}{{#ddm.link-to "index"}}I can deliver to a dropoff site{{/ddm.link-to}}{{/ddm.item}}
-                        {{/dd.menu}}
-                    {{/bs-dropdown}}
+    <form>  
+      <div class="form-group">
+        <label for="name" class="control-label">Name: </label>
         <div>
-          <img
-            src={{this.model.image}}
-            class="rental-pic"
-            alt="Picture of {{this.model.title}}"
-          >
+          {{input value=this.model.donation.name class="form-control"}}
         </div>
-        <div class="row">
-          <button type="submit" class="button btn btn-primary">Upload an image</button>
+      </div>
+      <div class="form-group">
+        <label for="email" class="control-label">Email: </label>
+        <div>
+          {{input value=this.model.donation.email class="form-control"}}
         </div>
-        {{#link-to "success" class="button btn btn-primary"}}
-          Submit
-        {{/link-to}}
-      </form>
-    </div>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="control-label">Phone: </label>
+        <div>
+          {{input value=this.model.donation.phone class="form-control"}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="description" class="control-label">What you're giving: </label>
+        <div>
+          {{textarea value=this.model.donation.description class="form-control"}}
+        </div>
+      </div>
+      <div class="dropdown">
+        <select 
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          onchange={{action "setSelection" value="target.value"}}
+        >
+          <option disabled selected>Delivery Method</option>
+          <option value="Pick-up only">Pick-up only</option>
+          <option value="I can deliver to recipient">I can deliver to recipient</option>
+          <option value="I can deliver to a dropoff site">I can deliver to a dropoff site</option>
+        </select>
+      </div>
+      <div class="col-sm-6">
+        <img
+          src={{this.model.category.image}}
+          class="rental-pic"
+          alt="Picture of {{this.model.category.title}}"
+        >
+      </div>
+      <div class="form-group">
+        <button type="submit" class="button btn btn-primary">Upload an image</button>
+      </div>
+      <div class="form-group">
+        <div>
+          <button {{action "createDonation"}} class="button btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>  
   </div>
 </div>
