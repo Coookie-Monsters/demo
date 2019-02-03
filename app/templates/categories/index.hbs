@@ -1,10 +1,14 @@
-{{#list-filter
-  filter=(action "filterByCity")
-as |filteredResults|
-}}
-  <ul class="results">
-    {{#each filteredResults as |item|}}
-      <li>{{category-listing category=item}}</li>
+ {{#list-filter
+    filter=(action "filterByCity")
+  as |filteredResults|
+  }}
+   <div class="container">
+      {{#each filteredResults as |row|}}
+        <div class="row">
+        {{#each row as |item|}}
+          {{category-listing category=item}}
+      {{/each}}
+        </div>
     {{/each}}
-  </ul>
+  </div>
 {{/list-filter}}

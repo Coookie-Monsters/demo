@@ -24,7 +24,7 @@ a {
 }
 
 .container {
-  background-image: url('/assets/images/landingpage.jpg') !important;
+  /* background-image: url('/assets/images/landingpage.jpg') !important; */
   /*height: 1000px;  You must set a specified height */
   background-position: center !important; /* Center the image */
   background-repeat: no-repeat !important; /* Do not repeat the image */
@@ -222,9 +222,7 @@ p {
   background-color: #f6f6f6;
   padding: 15px 50px;
   min-height: 200px;
-  display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .listing:hover {
@@ -239,16 +237,12 @@ p {
 }
 
 .listing a.image.wide {
-  flex: 100%;
-  flex-grow: 3;
-  max-width: 100%;
   position: relative;
   z-index: 999;
 }
 
 .listing .wide img {
   height: initial;
-  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -267,35 +261,10 @@ p {
   float: left;
   display: block;
   text-align: center;
-  width: 136px;
-}
-
-.listing h3 {
-  flex: 100%;
-  flex-grow: 2;
 }
 
 .listing h3 a {
   display: inline;
-}
-
-.listing .map-container {
-  flex-grow:1;
-  flex: 25%;
-}
-
-.listing .map {
-  height: 180px;
-  width: 200px;
-}
-
-.listing .details {
-  flex-grow: 2;
-  flex: 50%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: space-around;
 }
 
 .listing .detail {
