@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import _ from 'lodash';
 
 export default Component.extend({
   classNames: ['list-filter'],
@@ -23,18 +24,6 @@ export default Component.extend({
   },
 
   createRows(results){
-    let resultsArray = [];
-    results.forEach(result => resultsArray.push(result));
-
-    let rows = [];
-    for(let i = 0; i < resultsArray.length; i += 2){
-      if(i + 1 >= resultsArray.length){
-        rows.push([resultsArray[i]]);
-        break;
-      }
-      rows.push([resultsArray[i], resultsArray[i+1]]);
-    }
-    console.log(rows);
-    return rows;
+    return _.chunk(results.map(a => [a]).reduce((a, b) => a.concat(b)), 2);
   }
 });
