@@ -23,18 +23,7 @@ export default Component.extend({
   },
 
   createRows(results){
-    let resultsArray = [];
-    results.forEach(result => resultsArray.push(result));
-
-    let rows = [];
-    for(let i = 0; i < resultsArray.length; i += 2){
-      if(i + 1 >= resultsArray.length){
-        rows.push([resultsArray[i]]);
-        break;
-      }
-      rows.push([resultsArray[i], resultsArray[i+1]]);
-    }
-    console.log(rows);
-    return rows;
+    console.log(results);
+    return results.reduce((a, b) => [a, b]).map(a => Array.isArray(a) ? a : [a]);
   }
 });
