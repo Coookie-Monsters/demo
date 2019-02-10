@@ -50,34 +50,7 @@ p {
   line-height: 1.5;
   margin-bottom: 15px;
 }
-/**
- * Button
- */
 
-.button {
-  padding: 12px 30px 13px;
-  text-decoration: none;
-  color: #fff;
-  background: #2185D0;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.button:hover {
-  opacity: 1;
-}
-/**
- * Body Container
- */
-
-.container {
-  max-width: 1024px;
-  min-height: 100vh;
-  background: #f9f9f9;
-  margin: 0 auto;
-}
 /**
  * Top Navigation
  */
@@ -140,23 +113,6 @@ p {
 .menu input:focus {
   background-color: #f9f9f9;
   outline: none;
-}
-
-.menu button {
-  margin-right: 15px;
-  position: relative;
-  top: -1px;
-  left: -5px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: #262626;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.menu button:hover {
-  background-color: #111;
-  opacity: 1;
 }
 
 .menu .results {
@@ -350,14 +306,4 @@ p {
 
 .relative {
   position: relative;
-}
-
-.tomster {
-  background: url(../assets/images/teaching.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 200px;
-  position: relative;
-  top: -50px;
 }
