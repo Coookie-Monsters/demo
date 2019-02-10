@@ -1,19 +1,23 @@
-<div class="listing col-sm-6" id="landing-page">
-  <a
-    onclick={{action "toggleImageSize"}}
-    class="image {{if this.isWide "wide"}}"
-    role="button"
-  >
-    <img src={{this.category.image}} alt="">
-  </a>
-  <div class="details">
-    <h3>
-      {{link-to
-        this.category.title
-        "categories.show"
-        this.category.id
-        class=this.category.id
-      }}
-    </h3>
+<div class="col-sm-6">
+  {{#link-to
+    "categories.show"
+    this.category.id
+    class=this.category.id
+  }}
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      {{this.category.title}}
+    </div>
+
+    <div class="panel-body">
+      <a
+        onclick={{action "toggleImageSize"}}
+        class="image {{if this.isWide "wide"}}"
+        role="button"
+      >
+        <img class="category-image" src={{this.category.image}} alt="">
+      </a>
+    </div>
   </div>
+  {{/link-to}}
 </div>
