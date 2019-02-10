@@ -1,14 +1,5 @@
-// Required
-@import "ember-bootstrap/functions";
-@import "ember-bootstrap/variables";
-@import "ember-bootstrap/mixins";
+@import "bootstrap/_bootstrap";
 
-// Optional - Bootstrapping/Resetting
-@import "ember-bootstrap/root";
-@import "ember-bootstrap/print";
-@import "ember-bootstrap/reboot";
-
-// Optional - Everything else
-@import "ember-bootstrap/type";
-@import "ember-bootstrap/buttons";
-
+.category-image {
+  width: 300px;
+}

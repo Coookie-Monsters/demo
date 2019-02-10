@@ -11,7 +11,10 @@ module.exports = function(defaults) {
       'importBootstrapCSS': false
     },
     sassOptions: {
-      implementation: nodeSass
+      implementation: nodeSass,
+      includePaths: [
+        'node_modules'
+      ]
     }
   });
 
