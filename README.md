@@ -1,4 +1,6 @@
-# Super Rentals
+Note: This is the project we demoed at the hackathon. We ultimately decided in the final product to use React instead of Ember. Find that project [here](https://github.com/Coookie-Monsters/growing-gardens).
+
+# Growing Gardens
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
